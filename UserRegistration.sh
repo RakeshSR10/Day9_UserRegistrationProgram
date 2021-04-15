@@ -24,3 +24,17 @@ then
 else
         echo $Last_Name "is Invalid"
 fi
+
+#UC3 As a User need to enter a valid Email with 3 mandatory parts(Ex:abc@gmail.com)
+
+Email_Pattern="^([a-z]{3,}@)+([a-z]{5,}.com)$"
+
+echo "Enter a valid Email:"
+read User_Email
+
+if [[ $User_Email =~ $Email_Pattern ]]
+then
+        echo "Given (" $User_Email" ) email is valid"
+else
+        echo "Given (" $User_Email" ) email is Invalid"
+fi
