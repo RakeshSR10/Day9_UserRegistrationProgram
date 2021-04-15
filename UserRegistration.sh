@@ -38,3 +38,15 @@ then
 else
         echo "Given (" $User_Email" ) email is Invalid"
 fi
+
+#UC4 As a User need to enter a valid mobile number with country code(Ex:91 7896541230)
+Mobile_Number_Pattern="^((91[: :])+([0-9]{10}))"
+echo "Enter valid Mobile Number:"
+read Mobile_Number
+
+if [[ $Mobile_Number =~ $Mobile_Number_Pattern ]]
+then
+        echo "Mobile number is valid"
+else
+        echo "Mobile number is Invalid"
+fi
