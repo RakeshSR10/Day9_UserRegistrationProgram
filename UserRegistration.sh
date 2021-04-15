@@ -26,7 +26,6 @@ else
 fi
 
 #UC3 As a User need to enter a valid Email with 3 mandatory parts(Ex:abc@gmail.com)
-
 Email_Pattern="^([a-z]{3,}@)+([a-z]{5,}.com)$"
 
 echo "Enter a valid Email:"
@@ -49,4 +48,16 @@ then
         echo "Mobile number is valid"
 else
         echo "Mobile number is Invalid"
+fi
+
+#UC5 As a User need to follow pre-defined Password Rules Rule1=minimum 8 characters
+Password_Pattern="^[0-9a-zA-Z]{8,}$"
+echo "Enter password :"
+read User_Password
+
+if [[ $User_Password =~ $Password_Pattern ]]
+then
+        echo "password is valid"
+else
+        echo "password is Invalid"
 fi
