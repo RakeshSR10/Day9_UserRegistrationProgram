@@ -74,3 +74,15 @@ else
         echo "password is Invalid"
 fi
 
+#UC7 Password with Rule 3 = at least 1 Integer
+Password_Pattern2="^[A-Za-z0-9]{8,}$"
+echo "Enter password :"
+read User_Password2
+
+if [[ $User_Password2 =~ $Password_Pattern2 ]]
+then
+        echo "password is valid"
+else
+        echo "password is Invalid"
+fi
+
