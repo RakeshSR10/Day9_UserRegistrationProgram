@@ -51,7 +51,7 @@ else
 fi
 
 #UC5 As a User need to follow pre-defined Password Rules Rule1=minimum 8 characters
-Password_Pattern="^[0-9a-zA-Z]{8,}$"
+Password_Pattern="^[a-z]{8,}$"
 echo "Enter password :"
 read User_Password
 
@@ -61,3 +61,16 @@ then
 else
         echo "password is Invalid"
 fi
+
+#UC6 Password with Rule 2 = at least 1 Upper Case Character
+Password_Pattern1="^[a-zA-Z]{8,}$"
+echo "Enter password :"
+read User_Password1
+
+if [[ $User_Password1 =~ $Password_Pattern1 ]]
+then
+        echo "password is valid"
+else
+        echo "password is Invalid"
+fi
+
